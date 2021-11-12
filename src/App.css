@@ -1,3 +1,24 @@
-.App {
-  text-align: center;
+body {
+  background: rgb(2, 0, 36);
+  background: radial-gradient(circle, rgba(2, 0, 36, 1));
+}
+.container {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+  margin: auto;
+}
+.container > form {
+  width: 70%;
+  border: 1px solid hsl(0, 0%, 90%);
+  border-radius: 5px;
+  background: #fff;
+  padding: 20px;
+}
+button {
+  background: hsl(210, 90%, 40%) !important;
 }
