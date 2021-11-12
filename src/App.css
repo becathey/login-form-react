@@ -22,3 +22,8 @@ body {
 button {
   background: hsl(210, 90%, 40%) !important;
 }
+pre {
+  width: 70%;
+  color: #fff;
+  font-size: larger;
+}
