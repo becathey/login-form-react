@@ -1,12 +1,21 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  const initialValues = { username: "", email: "", password: "" };
-  const { formValues, setFormValues } = useState(initialValues);
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
   return (
     <div className="container">
-      <form>
+      <form onSubmit={handleSubmit}>
         <h1>Login Form</h1>
         <div className="ui divider"></div>
         <div className="ui form">
@@ -16,7 +25,10 @@ function App() {
               type="text"
               name="username"
               placeholder="Username"
-              value={formValues.username}
+              value={formData.username}
+              onChange={(e) =>
+                setFormData({ ...formData, username: e.target.value })
+              }
             />
           </div>
           <div className="field">
@@ -25,7 +37,10 @@ function App() {
               type="email"
               name="email"
               placeholder="Email"
-              value={formValues.email}
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
             />
           </div>
           <div className="field">
@@ -34,7 +49,10 @@ function App() {
               type="password"
               name="password"
               placeholder="Password"
-              value={formValues.password}
+              value={formData.password}
+              onChange={(e) =>
+                setFormData({ ...formData, password: e.target.value })
+              }
             />
           </div>
           <button className="fluid ui button blue">Submit</button>
