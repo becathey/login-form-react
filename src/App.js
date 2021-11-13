@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="container">
+      <pre>{JSON.stringify(formData, undefined, 2)}</pre>
       <form onSubmit={handleSubmit}>
         <h1>Login Form</h1>
         <div className="ui divider"></div>
