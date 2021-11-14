@@ -57,6 +57,7 @@ function App() {
               }
             />
           </div>
+          <p>{formErrors.username}</p>
           <div className="field">
             <label>Email</label>
             <input
@@ -69,6 +70,7 @@ function App() {
               }
             />
           </div>
+          <p>{formErrors.email}</p>
           <div className="field">
             <label>Password</label>
             <input
@@ -81,6 +83,7 @@ function App() {
               }
             />
           </div>
+          <p>{formErrors.password}</p>
           <button className="fluid ui button blue">Submit</button>
         </div>
       </form>
