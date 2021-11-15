@@ -51,7 +51,7 @@ function App() {
       ) : null}
 
       <form onSubmit={handleSubmit}>
-        <h1>Login Form</h1>
+        <h1>Login</h1>
         <div className="ui divider"></div>
         <div className="ui form">
           <div className="field">
