@@ -46,7 +46,10 @@ function App() {
 
   return (
     <div className="container">
-      <pre>{JSON.stringify(formData, undefined, 2)}</pre>
+      {Object.keys(formErrors).length === 0 && isSubmit ? (
+        <div className="ui message success">Signed in successfully!</div>
+      ) : null}
+
       <form onSubmit={handleSubmit}>
         <h1>Login Form</h1>
         <div className="ui divider"></div>
@@ -63,7 +66,7 @@ function App() {
               }
             />
           </div>
-          <p>{formErrors.username}</p>
+          <p className="error-text">{formErrors.username}</p>
           <div className="field">
             <label>Email</label>
             <input
@@ -76,7 +79,7 @@ function App() {
               }
             />
           </div>
-          <p>{formErrors.email}</p>
+          <p className="error-text">{formErrors.email}</p>
           <div className="field">
             <label>Password</label>
             <input
@@ -89,7 +92,7 @@ function App() {
               }
             />
           </div>
-          <p>{formErrors.password}</p>
+          <p className="error-text">{formErrors.password}</p>
           <button className="fluid ui button blue">Submit</button>
         </div>
       </form>
