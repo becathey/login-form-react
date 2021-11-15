@@ -25,7 +25,7 @@ function App() {
   }, [formErrors]);
   const validate = (values) => {
     const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\[^\s@]{2,}$/i;
+    const regex = /^\S+@\S+\.\S+$/;
     if (!values.username) {
       errors.username = "Username is required!";
     }
